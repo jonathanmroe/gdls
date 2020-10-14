@@ -1,0 +1,88 @@
+<project name="GDLS" default="init" basedir="." xmlns:if="ant:if">
+	<description>
+    GDLS Build Script
+  </description>
+	<!-- set global properties for this build -->
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+	<property location="${build}/${app.name}" name="build.application"/>
+	<input message="Dev or Prod build? [Dev]" validargs="Dev,Prod" addproperty="env" defaultvalue="Dev" />
+	
+	
+
+	<condition property="devSelected">
+		<equals arg1="Dev" arg2="${env}" />
+	</condition>
+	<condition property="prodSelected">
+		<equals arg1="Prod" arg2="${env}" />
+	</condition>
+
+
+	<target name="init" depends="clean,build_dev,build_prod">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="build_dev" if="devSelected">
+		<copy todir="${build}">
+			<fileset dir=".">
+				<exclude name=".project" />
+				<exclude name=".classpath" />
+				<exclude name=".zip" />
+				<exclude name=".settings/**" />
+				<exclude name="build.ant" />
+				<exclude name="build/**" />
+				<exclude name="test/**" />
+				<exclude name="bin/**" />
+			</fileset>
+		</copy>
+		<echo message="Replacing {domain} token in .xml files with ${env}" />
+		<replace dir="${build}" value="co.gpsl">
+
+			<include name="**/*" />
+			<replacetoken>{domain}</replacetoken>
+		</replace>
+
+	</target>
+
+	<target name="build_prod" if="prodSelected">
+		<input message="Enter the build number (e.g. 1.0.0):" addproperty="build.no" />
+		<property name="app.name" value="gdls_${build.no}" />
+		<copy todir="${build}">
+			<fileset dir=".">
+				<exclude name=".project" />
+				<exclude name=".classpath" />
+				<exclude name=".zip" />
+				<exclude name=".settings/**" />
+				<exclude name="build.ant" />
+				<exclude name="build/**" />
+				<exclude name="test/**" />
+				<exclude name="bin/**" />
+			</fileset>
+		</copy>
+		<echo message="Replacing {domain} token in .xml files with gdls" />
+		<replace dir="${build}" value="gdls">
+			<include name="**/*" />
+			<replacetoken>{domain}</replacetoken>
+		</replace>
+		<echo message="Replacing co.gpsl token in .xml files with gdls" />
+		<replace dir="${build}" value="gdls">
+					<include name="**/*" />
+			<replacetoken>gdls</replacetoken>
+		</replace>
+		
+		<zip destfile="${app.name}.zip" basedir="${build}">
+			<!--<zipfileset dir="../build" prefix="${app.name}"/>-->
+		</zip>
+								
+		<move file="${app.name}.zip" todir="${build}/../../build"/>
+
+	</target>
+
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} directory tree -->
+		<delete dir="${build}" />
+	</target>
+</project>

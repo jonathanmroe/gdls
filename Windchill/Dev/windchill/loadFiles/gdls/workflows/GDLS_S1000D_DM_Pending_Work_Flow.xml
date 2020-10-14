@@ -1,0 +1,2985 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE NmLoader SYSTEM "standard11_2.dtd">
+<NmLoader>
+  <csvWfProcessTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createProcessTemplate">
+    <csvxCoordinate>15</csvxCoordinate>
+    <csvyCoordinate>15</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfProcessTemplate:3395471</csvuniqueId>
+    <csvname>GDLS S1000D DM Pending Workflow</csvname>
+    <csvdescription></csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions></csvinstructions>
+    <csviconName>wt/clients/images/workproc.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>PRODUCT MANAGER</csvresponsibleRole>
+    <csvenabled>true</csvenabled>
+    <csvfolderLocation>/System</csvfolderLocation>
+    <csvdedicatedQueue>false</csvdedicatedQueue>
+  </csvWfProcessTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>reworkComments</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>722</csvxCoordinate>
+    <csvyCoordinate>60</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395474</csvuniqueId>
+    <csvname>Dummy Participant Task</csvname>
+    <csvdescription>The task exists to allow the Author and Reviewer roles to be set by this workflow# without this task the roles are not assignable. This is because the workflow is analysed to determine the roles which are required for the tasks within the workflow and the Author and Reviewer performed tasks are in other individualized workflows.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>null</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole></csvresponsibleRole>
+    <csvtask>WfTask</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>AUTHOR</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>VALIDATOR</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>EDITOR</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>TRANSLATOR</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>AUTHOR</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>AUTHOR</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>AUTHOR</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>AUTHOR</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>AUTHOR</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>EDITOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>TRANSLATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>true</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>default</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>380</csvxCoordinate>
+    <csvyCoordinate>99</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395476</csvuniqueId>
+    <csvname>Set Authors</csvname>
+    <csvdescription>Allows the Logistics Prime to assign group/participants to author roles required to &apos;Author&apos; the Document.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the author(s) that will be authoring the data module.</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>LOGISTICS_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>contentHolder</csvinitializeFrom>
+    <csvcopyInto>contentHolder</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;AUTHOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Author has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>AUTHOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>389</csvxCoordinate>
+    <csvyCoordinate>142</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395479</csvuniqueId>
+    <csvname>Set Illustrators</csvname>
+    <csvdescription>Allows the Logistics Prime to assign group/participants to Illustrator role</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the illustrator</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>LOGISTICS_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>contentHolder</csvinitializeFrom>
+    <csvcopyInto>contentHolder</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;ILLUSTRATOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Illustrator has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.ILLUSTRATOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>AUTHOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>410</csvxCoordinate>
+    <csvyCoordinate>200</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395482</csvuniqueId>
+    <csvname>Set Author Reviewers</csvname>
+    <csvdescription>Allows the Logistics Prime to assign group/participants to Author Reviewer role to review the Document.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the author reviewer(s) that will be reviewing the data module.</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>LOGISTICS_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;AUTHOR_REVIEWER&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;AUTHOR Reviewer has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR_REVIEWER</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>448</csvxCoordinate>
+    <csvyCoordinate>299</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395485</csvuniqueId>
+    <csvname>Set Validators</csvname>
+    <csvdescription>Allows the Logistics Prime to assign group/participants to Validator role to review the Document.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the validator(s) that will be reviewing the data module.</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>LOGISTICS_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;VALIDATOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Validator has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.VALIDATOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>445</csvxCoordinate>
+    <csvyCoordinate>360</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395488</csvuniqueId>
+    <csvname>Set Editors</csvname>
+    <csvdescription>Allows the Logistics Prime to assign group/participants to Editor role to review the Document.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the editor(s) that will be reviewing the data module.</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>LOGISTICS_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;EDITOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Editor has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.EDITOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>237</csvxCoordinate>
+    <csvyCoordinate>331</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395491</csvuniqueId>
+    <csvname>Set Translators</csvname>
+    <csvdescription>Allows the Publication Prime to assign group/participants to translator roles required to translate the Document.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the translator(s) that will be translating the data module content.</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>PUBLICATION_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>contentHolder</csvinitializeFrom>
+    <csvcopyInto>contentHolder</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;TRANSLATOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Translator has been set&quot;);@}@@@wt.workflow.engine.WfProcess process = ((wt.workflow.engine.WfActivity) self.getObject()).getParentProcess();@wt.epm.EPMDocument document = (wt.epm.EPMDocument)primaryBusinessObject;@@//Assign the current user to the Illustrator role@wt.project.Role authorRole = wt.project.Role.toRole(&quot;TRANSLATOR&quot;);@wt.org.WTPrincipal currentUser=wt.session.SessionMgr.getPrincipal();@@wt.team.Team localTeam = wt.team.TeamHelper.service.getTeam(document);@@if(localTeam == null){@System.out.println(&quot;Team does not exist&quot;);@throw new wt.util.WTException(&quot;Team Does Not Exist&quot;);@}@java.util.Vector roles = localTeam.getRoles();@java.util.Enumeration e = roles.elements();@while(e.hasMoreElements()){@wt.project.Role role = (wt.project.Role)e.nextElement();@if(role.toString().equalsIgnoreCase(&quot;TRANSLATOR&quot;)){@//Remove all other principals@java.util.Enumeration e2 = localTeam.getPrincipalTarget(role);@while(e2.hasMoreElements()){@wt.org.WTPrincipalReference principal = (wt.org.WTPrincipalReference)e2.nextElement();@if(principal.getPrincipal() != currentUser){@wt.team.TeamHelper.service.deleteRolePrincipalMap(wt.project.Role.toRole(&quot;TRANSLATOR&quot;)# principal.getPrincipal()# (wt.team.WTRoleHolder2) localTeam);@}@}@//Now set the current user as the Illustrator@wt.team.TeamHelper.service.addRolePrincipalMap(wt.project.Role.toRole(&quot;TRANSLATOR&quot;)# currentUser# (wt.team.WTRoleHolder2) localTeam);@}@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.TRANSLATOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>AUTHOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>152</csvxCoordinate>
+    <csvyCoordinate>426</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395494</csvuniqueId>
+    <csvname>Set Translator Editors</csvname>
+    <csvdescription>Allows the Publication Prime to assign group/participants to Translator Editor role required to review the Document.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the Translator Editor that will be verifying the translated data module content.</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>PUBLICATION_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>contentHolder</csvinitializeFrom>
+    <csvcopyInto>contentHolder</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;TRANSLATOR_EDITOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Translator Editor has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.TRANSLATOR_EDITOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>AUTHOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>190</csvxCoordinate>
+    <csvyCoordinate>373</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395497</csvuniqueId>
+    <csvname>Set French Illustrators</csvname>
+    <csvdescription>Allows the Publication Prime to assign group/participants to Illustrator role</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>This is an optional task. You do not need to complete this immediately.@@Please set the illustrator</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>PUBLICATION_PRIME</csvresponsibleRole>
+    <csvtask>WfAugment</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_allocate_author</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>contentHolder</csvinitializeFrom>
+    <csvcopyInto>contentHolder</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfActivity activity = (wt.workflow.engine.WfActivity) self.getObject();@@// Ensure all the roles have been assigned a participant@if (!com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.checkGivenRoleIsFilled(activity#wt.project.Role.toRole(&quot;ILLUSTRATOR&quot;))) {@ wt.util.WTMessage message = new wt.util.WTMessage(com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.class.getName()# com.ptc.arbortext.windchill.rules.workflow.WorkflowActionsRB.EMPTY_ROLES# null);@ throw new wt.util.WTException(message);@} else {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# activity# &quot;Illustrator has been set&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>true</csvviewPermission>
+    <csvaddPermission>true</csvaddPermission>
+    <csvremovePermission>true</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.ILLUSTRATOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>AUTHOR</csvrole>
+    <csvresourcePoolType>Role</csvresourcePoolType>
+    <csvresourcePoolName>wt.project.Role.AUTHOR</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>false</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Set Participant Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>74</csvxCoordinate>
+    <csvyCoordinate>445</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395500</csvuniqueId>
+    <csvname>Release For Translation</csvname>
+    <csvdescription>null</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>Release For Translation</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>PUBLICATION_PRIME</csvresponsibleRole>
+    <csvtask>WfTask</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>helpId</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>false</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>s1000d_solution_dialog_iel_issue</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>true</csvreadOnly>
+    <csvdisplayNames>de:;;;qqqdefault:S1000D Help;;;qqqzh_TW:;;;qqqko:;;;qqqja:;;;qqqen:;;;qqqit:;;;qqqzh_CN:;;;qqqfr:</csvdisplayNames>
+  </csvWfVariable>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>true</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>S1000D Verification Task</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>443</csvxCoordinate>
+    <csvyCoordinate>416</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395602</csvuniqueId>
+    <csvname>Claim Logistics Prime Tasks</csvname>
+    <csvdescription>This task allows an individual to claim the work for the Logistics Prime role. By completing this task# only this user is kept for the Logistics Prime role for this DM. All other Logistics Prime individuals are removed from the role for this DM.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>null</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>LOGISTICS_PRIME</csvresponsibleRole>
+    <csvtask>WfTask</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE_TASK</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfProcess process = ((wt.workflow.engine.WfActivity) self.getObject()).getParentProcess();@wt.epm.EPMDocument document = (wt.epm.EPMDocument)primaryBusinessObject;@@//Assign the current user to the Logistics Prime role@wt.project.Role logisticsPrimeRole = wt.project.Role.toRole(&quot;LOGISTICS_PRIME&quot;);@wt.org.WTPrincipal currentUser=wt.session.SessionMgr.getPrincipal();@@wt.team.Team localTeam = wt.team.TeamHelper.service.getTeam(document);@@if(localTeam == null){@System.out.println(&quot;Team does not exist&quot;);@throw new wt.util.WTException(&quot;Team Does Not Exist&quot;);@}@java.util.Vector roles = localTeam.getRoles();@java.util.Enumeration e = roles.elements();@while(e.hasMoreElements()){@wt.project.Role role = (wt.project.Role)e.nextElement();@if(role.toString().equalsIgnoreCase(&quot;LOGISTICS_PRIME&quot;)){@//Remove all other principals@java.util.Enumeration e2 = localTeam.getPrincipalTarget(role);@while(e2.hasMoreElements()){@wt.org.WTPrincipalReference principal = (wt.org.WTPrincipalReference)e2.nextElement();@if(principal.getPrincipal() != currentUser){@wt.team.TeamHelper.service.deleteRolePrincipalMap(wt.project.Role.toRole(&quot;LOGISTICS_PRIME&quot;)# principal.getPrincipal()# (wt.team.WTRoleHolder2) localTeam);@}@}@//Now set the current user as the Illustrator@wt.team.TeamHelper.service.addRolePrincipalMap(wt.project.Role.toRole(&quot;LOGISTICS_PRIME&quot;)# currentUser# (wt.team.WTRoleHolder2) localTeam);@}@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>LOGISTICS_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>EDITOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>TRANSLATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>true</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>default</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfAssignedActivityTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createAssignedActivityTemplate">
+    <csvxCoordinate>242</csvxCoordinate>
+    <csvyCoordinate>268</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfAssignedActivityTemplate:3395605</csvuniqueId>
+    <csvname>Claim Publication Prime Tasks</csvname>
+    <csvdescription>This task allows an individual to claim the work for the Publication Prime role. By completing this task# only this user is kept for the Publication Prime role for this DM. All other Publication Prime individuals are removed from the role for this DM.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions>null</csvinstructions>
+    <csviconName>wt/clients/images/assignactvty.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole>PUBLICATION_PRIME</csvresponsibleRole>
+    <csvtask>WfTask</csvtask>
+    <csvsendNotification>false</csvsendNotification>
+    <csvlocalProject></csvlocalProject>
+    <csvvariableProject>null</csvvariableProject>
+    <csvsigningRequired>false</csvsigningRequired>
+  </csvWfAssignedActivityTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>COMPLETE_TASK</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfProcess process = ((wt.workflow.engine.WfActivity) self.getObject()).getParentProcess();@wt.epm.EPMDocument document = (wt.epm.EPMDocument)primaryBusinessObject;@@//Assign the current user to the PUBLICATION_PRIME role@wt.project.Role publicationPrimeRole = wt.project.Role.toRole(&quot;PUBLICATION_PRIME&quot;);@wt.org.WTPrincipal currentUser=wt.session.SessionMgr.getPrincipal();@@wt.team.Team localTeam = wt.team.TeamHelper.service.getTeam(document);@@if(localTeam == null){@System.out.println(&quot;Team does not exist&quot;);@throw new wt.util.WTException(&quot;Team Does Not Exist&quot;);@}@java.util.Vector roles = localTeam.getRoles();@java.util.Enumeration e = roles.elements();@while(e.hasMoreElements()){@wt.project.Role role = (wt.project.Role)e.nextElement();@if(role.toString().equalsIgnoreCase(&quot;PUBLICATION_PRIME&quot;)){@//Remove all other principals@java.util.Enumeration e2 = localTeam.getPrincipalTarget(role);@while(e2.hasMoreElements()){@wt.org.WTPrincipalReference principal = (wt.org.WTPrincipalReference)e2.nextElement();@if(principal.getPrincipal() != currentUser){@wt.team.TeamHelper.service.deleteRolePrincipalMap(wt.project.Role.toRole(&quot;PUBLICATION_PRIME&quot;)# principal.getPrincipal()# (wt.team.WTRoleHolder2) localTeam);@}@}@//Now set the current user as the Publication Prime@wt.team.TeamHelper.service.addRolePrincipalMap(wt.project.Role.toRole(&quot;PUBLICATION_PRIME&quot;)# currentUser# (wt.team.WTRoleHolder2) localTeam);@}@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfRoleAssignee handler="wt.workflow.definer.LoadWorkflow.addRoleAssignee">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvrequired>false</csvrequired>
+    <csvcompletionPolicyType>ANY</csvcompletionPolicyType>
+    <csvcompletionPolicyValue>0</csvcompletionPolicyValue>
+    <csvexternalTask>false</csvexternalTask>
+  </csvWfRoleAssignee>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>VALIDATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>AUTHOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>TRANSLATOR</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfRoleSetup handler="wt.workflow.definer.LoadWorkflow.addRoleSetup">
+    <csvassigneeType>Role</csvassigneeType>
+    <csvassigneeName>PUBLICATION_PRIME</csvassigneeName>
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvviewPermission>false</csvviewPermission>
+    <csvaddPermission>false</csvaddPermission>
+    <csvremovePermission>false</csvremovePermission>
+  </csvWfRoleSetup>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>VALIDATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>EDITOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>TRANSLATOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>TRANSLATOR_EDITOR</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfResourcePool handler="wt.workflow.definer.LoadWorkflow.addResourcePool">
+    <csvrole>PUBLICATION_PRIME</csvrole>
+    <csvresourcePoolType>Context Team</csvresourcePoolType>
+    <csvresourcePoolName>Context Team</csvresourcePoolName>
+  </csvWfResourcePool>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>ACTIVITY_ASSIGNMENT_CHANGED</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfAuditAction handler="wt.workflow.definer.LoadWorkflow.addAuditAction">
+    <csvauditAction>EXECUTION_ERROR</csvauditAction>
+    <csvauditActionFlag>true</csvauditActionFlag>
+  </csvWfAuditAction>
+  <csvWfVotingAction handler="wt.workflow.definer.LoadWorkflow.addVotingAction">
+    <csvvotingAction>RECORD_VOTING</csvvotingAction>
+    <csvvotingActionFlag>true</csvvotingActionFlag>
+  </csvWfVotingAction>
+  <csvWfIgnoreUnresolvedRoleAction handler="wt.workflow.definer.LoadWorkflow.addIgnoreUnresolvedRoleAction">
+    <csvignoreUnresolvedRoleAction>IGNOREUNRESOLVED_ROLE</csvignoreUnresolvedRoleAction>
+    <csvignoreUnresolvedRoleActionFlag>true</csvignoreUnresolvedRoleActionFlag>
+  </csvWfIgnoreUnresolvedRoleAction>
+  <csvWfCreateTaskForRequiredRoleAction handler="wt.workflow.definer.LoadWorkflow.addCreateTaskForRequiredRoleAction">
+    <csvcreateTaskForRequiredRoleAction>CREATETASKFORREQUIRED_ROLE</csvcreateTaskForRequiredRoleAction>
+    <csvcreateTaskForRequiredRoleActionFlag>true</csvcreateTaskForRequiredRoleActionFlag>
+  </csvWfCreateTaskForRequiredRoleAction>
+  <csvRenderChoice handler="wt.workflow.definer.LoadWorkflow.renderTemplate"><csvrender>HTML</csvrender></csvRenderChoice>
+  <csvTaskFormTemplate handler="wt.workflow.definer.LoadWorkflow.saveTaskFormTemplate"><csvTemplateName>default</csvTemplateName></csvTaskFormTemplate>
+  <csvWfAssignedActivityTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveAssignedActivityTemplate"></csvWfAssignedActivityTemplateEnd>
+  <csvWfExprRobotTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createExprRobotTemplate">
+    <csvxCoordinate>67</csvxCoordinate>
+    <csvyCoordinate>100</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfExprRobotTemplate:3395608</csvuniqueId>
+    <csvname>Initialize</csvname>
+    <csvdescription>This node will initialize the workflow variables# Synchronize and Validate the document# refresh the workspaces# and set the previous roles on the data module</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions></csvinstructions>
+    <csviconName>wt/clients/images/methrobt.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole></csvresponsibleRole>
+    <csvhost>localhost</csvhost>
+  </csvWfExprRobotTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>reworkComments</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>_ROBOT_EXPRESSION_</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfProcess process = (wt.workflow.engine.WfProcess) self.getObject();@wt.epm.EPMDocument document = (wt.epm.EPMDocument) primaryBusinessObject;@@// Initialize Workflow Variables.@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process# &quot;Workflow started -&gt; Pending&quot;);@@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.completePreviousProcesses(process);@boolean hasPreviousProcess = com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.hasPreviousProcess(process);@@if(hasPreviousProcess){@ process = com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.setPreviousRoles(process);@} else {@ process = com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.setProductManagerRoleFromDocumentOrContainer(process);@}@@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process# &quot;Complete All Previous Processes.&quot;);@@wt.part.WTPart[] contentHolders = com.ptc.arbortext.windchill.asps.services.ASPSHelper.getContentHolders(document);@@if(contentHolders.length == 1) {@ contentHolder = contentHolders[0];@} else if(contentHolders.length == 0) {@ com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process# &quot;No Content Holders found for &quot; + document.getName());@} else if(contentHolders.length &gt; 1) {@  com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process# &quot;More than one Content Holder found for &quot; + document.getName() + &quot;# unable to determine which one is relevant&quot;);@}</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfExprRobotTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveExprRobotTemplate"></csvWfExprRobotTemplateEnd>
+  <csvWfExprRobotTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createExprRobotTemplate">
+    <csvxCoordinate>267</csvxCoordinate>
+    <csvyCoordinate>52</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfExprRobotTemplate:3395611</csvuniqueId>
+    <csvname>Validate</csvname>
+    <csvdescription>null</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions></csvinstructions>
+    <csviconName>wt/clients/images/methrobt.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole></csvresponsibleRole>
+    <csvhost>localhost</csvhost>
+  </csvWfExprRobotTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>reworkComments</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>_ROBOT_EXPRESSION_</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfProcess process = (wt.workflow.engine.WfProcess) self.getObject();@wt.epm.EPMDocument document = (wt.epm.EPMDocument) primaryBusinessObject;@@// Validate the object.@com.ptc.arbortext.windchill.rules.workflow.s1000D.S1000DWorkflowHelper.validateDocument(document# process);@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process # &quot;Document has been validated&quot;);</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfExprRobotTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveExprRobotTemplate"></csvWfExprRobotTemplateEnd>
+  <csvWfExprRobotTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createExprRobotTemplate">
+    <csvxCoordinate>129</csvxCoordinate>
+    <csvyCoordinate>100</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfExprRobotTemplate:3395614</csvuniqueId>
+    <csvname>Synchronize</csvname>
+    <csvdescription>This takes attributes from the document and inserts them into the xml. The type based infromation on xpath and synchronisation rules will be used.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions></csvinstructions>
+    <csviconName>wt/clients/images/methrobt.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole></csvresponsibleRole>
+    <csvhost>localhost</csvhost>
+  </csvWfExprRobotTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>reworkComments</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>_ROBOT_EXPRESSION_</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfProcess process = (wt.workflow.engine.WfProcess) self.getObject();@wt.epm.EPMDocument document = (wt.epm.EPMDocument) primaryBusinessObject;@@// Update the document xml based on the document attributes.@document = (wt.epm.EPMDocument) com.ptc.arbortext.windchill.rules.markup.DocumentHandler.writeAttributes(document);@document = (wt.epm.EPMDocument) com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.synchronise(document);@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.createDmRefLinks(document);@@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process# &quot;Synchronized attributes into the document markup.&quot;);</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfExprRobotTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveExprRobotTemplate"></csvWfExprRobotTemplateEnd>
+  <csvWfExprRobotTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createExprRobotTemplate">
+    <csvxCoordinate>269</csvxCoordinate>
+    <csvyCoordinate>5</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfExprRobotTemplate:3395617</csvuniqueId>
+    <csvname>Refresh Workspace</csvname>
+    <csvdescription>This is expression ensures that the document in the workspace reflects the latest version of the document that is c/i to Windchill.</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions></csvinstructions>
+    <csviconName>wt/clients/images/methrobt.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole></csvresponsibleRole>
+    <csvhost>localhost</csvhost>
+  </csvWfExprRobotTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>primaryBusinessObject</csvname>
+    <csvtype>wt.fc.WTObject</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom>primaryBusinessObject</csvinitializeFrom>
+    <csvcopyInto>primaryBusinessObject</csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>contentHolder</csvname>
+    <csvtype>wt.part.WTPart</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>reworkComments</csvname>
+    <csvtype>java.lang.String</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>true</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue></csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfExpression handler="wt.workflow.definer.LoadWorkflow.addExpression">
+    <csvexpression>_ROBOT_EXPRESSION_</csvexpression>
+    <csvexprBody>wt.workflow.engine.WfProcess process = (wt.workflow.engine.WfProcess) self.getObject();@wt.epm.EPMDocument document = (wt.epm.EPMDocument) primaryBusinessObject;@@// Refresh all users workspaces.@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.refreshWorkspaceObject(process# document);@com.ptc.arbortext.windchill.rules.workflow.WorkflowHelper.log(org.apache.log4j.Level.DEBUG# process# &quot;Workspace Refreshed.&quot;);</csvexprBody>
+    <csvcheckSyntax>false</csvcheckSyntax>
+  </csvWfExpression>
+  <csvWfExprRobotTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveExprRobotTemplate"></csvWfExprRobotTemplateEnd>
+  <csvWfInternalMethodTemplateBegin handler="wt.workflow.definer.LoadWorkflow.createInternalMethodTemplate">
+    <csvxCoordinate>144</csvxCoordinate>
+    <csvyCoordinate>501</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfInternalMethodTemplate:3395620</csvuniqueId>
+    <csvname>Work In Progress</csvname>
+    <csvdescription>null</csvdescription>
+    <csvcategory>DEFAULT</csvcategory>
+    <csvinstructions></csvinstructions>
+    <csviconName>wt/clients/images/genrobt.gif</csviconName>
+    <csvduration>0</csvduration>
+    <csvprocessDuration>0</csvprocessDuration>
+    <csvstartDelay>0</csvstartDelay>
+    <csvstartProcessDelay>0</csvstartProcessDelay>
+    <csvnotifyBeforeDeadline>false</csvnotifyBeforeDeadline>
+    <csvtimeToDeadline>0</csvtimeToDeadline>
+    <csvnotifyAfterDeadline>false</csvnotifyAfterDeadline>
+    <csvtimePastDeadline>0</csvtimePastDeadline>
+    <csvresponsibleRole></csvresponsibleRole>
+    <csvhost>localhost</csvhost>
+    <csvserviceName>wt.lifecycle.LifeCycleService</csvserviceName>
+    <csvmethodName>setState</csvmethodName>
+    <csvmethodReturn>null</csvmethodReturn>
+  </csvWfInternalMethodTemplateBegin>
+  <csvWfVariable handler="wt.workflow.definer.LoadWorkflow.addVariable">
+    <csvname>aState</csvname>
+    <csvtype>wt.lifecycle.State</csvtype>
+    <csvrequired>false</csvrequired>
+    <csvvisible>false</csvvisible>
+    <csvmutable>true</csvmutable>
+    <csvresetable>true</csvresetable>
+    <csvinitializeFrom></csvinitializeFrom>
+    <csvcopyInto></csvcopyInto>
+    <csvdefaultValue>WIP</csvdefaultValue>
+    <csvpermissionList>0</csvpermissionList>
+    <csvreadOnly>false</csvreadOnly>
+    <csvdisplayNames></csvdisplayNames>
+  </csvWfVariable>
+  <csvWfSignature handler="wt.workflow.definer.LoadWorkflow.addSignature"><csvsignature>primaryBusinessObject</csvsignature></csvWfSignature>
+  <csvWfSignature handler="wt.workflow.definer.LoadWorkflow.addSignature"><csvsignature>aState</csvsignature></csvWfSignature>
+  <csvWfInternalMethodTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveInternalMethodTemplate"></csvWfInternalMethodTemplateEnd>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>712</csvxCoordinate>
+    <csvyCoordinate>232</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395622</csvuniqueId>
+    <csvfunction>AND</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>267</csvxCoordinate>
+    <csvyCoordinate>143</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395623</csvuniqueId>
+    <csvfunction>OR</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>true</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>49</csvxCoordinate>
+    <csvyCoordinate>297</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395624</csvuniqueId>
+    <csvfunction>OR</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>true</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>427</csvxCoordinate>
+    <csvyCoordinate>553</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395625</csvuniqueId>
+    <csvfunction>AND</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>790</csvxCoordinate>
+    <csvyCoordinate>253</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395626</csvuniqueId>
+    <csvfunction>OR</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>true</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>125</csvxCoordinate>
+    <csvyCoordinate>179</csvyCoordinate>
+    <csvrouterType>CONDITIONAL</csvrouterType>
+    <csvroutingEvents>is_English/is_not_English/</csvroutingEvents>
+    <csvautoRoutingExpression>wt.epm.EPMDocument document = (wt.epm.EPMDocument)primaryBusinessObject;@com.ptc.core.lwc.server.PersistableAdapter obj = new com.ptc.core.lwc.server.PersistableAdapter(document#null#null#null);@obj.load(&quot;languageCode&quot;);@String language = (String) obj.get (&quot;languageCode&quot;);@System.out.println(&quot;language = &quot;+language);@if (language.equals(&quot;en&quot;)){@result = &quot;is_English&quot;;@System.out.println(&quot;is_English&quot;);@}@else {@result = &quot;is_not_English&quot;;@System.out.println(&quot;is_not_English&quot;);@}</csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395627</csvuniqueId>
+    <csvfunction>OR</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>857</csvxCoordinate>
+    <csvyCoordinate>204</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395629</csvuniqueId>
+    <csvfunction>AND</csvfunction>
+    <csvtype>DEFAULT</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>948</csvxCoordinate>
+    <csvyCoordinate>204</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395630</csvuniqueId>
+    <csvfunction>AND</csvfunction>
+    <csvtype>END</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>547</csvxCoordinate>
+    <csvyCoordinate>398</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395631</csvuniqueId>
+    <csvfunction>AND</csvfunction>
+    <csvtype>GROUND</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>315</csvxCoordinate>
+    <csvyCoordinate>308</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395632</csvuniqueId>
+    <csvfunction>AND</csvfunction>
+    <csvtype>GROUND</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfConnectorTemplate handler="wt.workflow.definer.LoadWorkflow.createConnectorTemplate">
+    <csvxCoordinate>5</csvxCoordinate>
+    <csvyCoordinate>100</csvyCoordinate>
+    <csvrouterType>NONE</csvrouterType>
+    <csvroutingEvents></csvroutingEvents>
+    <csvautoRoutingExpression></csvautoRoutingExpression>
+    <csvuniqueId>wt.workflow.definer.WfConnectorTemplate:3395633</csvuniqueId>
+    <csvfunction>OR</csvfunction>
+    <csvtype>START</csvtype>
+    <csvthreshold>0</csvthreshold>
+    <csvterminateActivities>false</csvterminateActivities>
+  </csvWfConnectorTemplate>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395605</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395632</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395602</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395631</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395624</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395605</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395602</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfInternalMethodTemplate:3395620</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395625</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395500</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfInternalMethodTemplate:3395620</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395624</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395500</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395624</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395494</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfExprRobotTemplate:3395617</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395629</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfExprRobotTemplate:3395611</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395629</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395629</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395630</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395626</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395629</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395482</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395624</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395491</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395476</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395624</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395497</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395622</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395626</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfExprRobotTemplate:3395614</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395627</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395627</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>is_English</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395627</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395624</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>is_not_English</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfExprRobotTemplate:3395614</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfExprRobotTemplate:3395611</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395476</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395622</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395633</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfExprRobotTemplate:3395608</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfExprRobotTemplate:3395614</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfExprRobotTemplate:3395617</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfExprRobotTemplate:3395608</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfExprRobotTemplate:3395614</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395479</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395622</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395482</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395622</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395485</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395622</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395488</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395622</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395491</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395625</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395494</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395625</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfAssignedActivityTemplate:3395497</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395625</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>COMPLETE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395625</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfConnectorTemplate:3395626</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>FIRE</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395479</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395488</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfNodeTemplateLinkBegin handler="wt.workflow.definer.LoadWorkflow.createNodeTemplateLink">
+    <csvsourceNode>wt.workflow.definer.WfConnectorTemplate:3395623</csvsourceNode>
+    <csvdestNode>wt.workflow.definer.WfAssignedActivityTemplate:3395485</csvdestNode>
+    <csvbackLoop>false</csvbackLoop>
+  </csvWfNodeTemplateLinkBegin>
+  <csvWfEventActionPair handler="wt.workflow.definer.LoadWorkflow.addEventActionPair">
+    <csvevent>FIRE</csvevent>
+    <csvaction>START</csvaction>
+  </csvWfEventActionPair>
+  <csvWfNodeTemplateLinkEnd handler="wt.workflow.definer.LoadWorkflow.saveNodeTemplateLink"></csvWfNodeTemplateLinkEnd>
+  <csvWfProcessTemplateEnd handler="wt.workflow.definer.LoadWorkflow.saveProcessTemplate"></csvWfProcessTemplateEnd>
+</NmLoader>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listofactions SYSTEM "actions.dtd">
+<listofactions>	
+
+	<objecttype name="gdls" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<!--
+		<action name="authorreviewer" type="gdls">
+		</action>
+		<action name="validator" type="gdls">
+		</action>
+		-->
+		
+		<action name="claimLogisticsPrimeTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Logistics%20Prime%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="claimAuthorTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Author%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="claimAuthorReviewerTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Author%20Reviewer%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="authorReviewerSetForRework">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.CheckForReworkAction" url="?activityName=Author%20Reviewer%20Set%20For%20Rework"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilter"/>
+		</action>
+		<action name="claimValidatorTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Validator%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="validatorSetForRework">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.CheckForReworkAction" url="?activityName=Validator%20Set%20For%20Rework"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilter"/>
+		</action>
+		<action name="claimEditorTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Editor%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="editorSetForRework">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.CheckForReworkAction" url="?activityName=Editor%20Set%20For%20Rework"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilter"/>
+		</action>
+		<action name="claimTranslatorTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Translator%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>		
+		<action name="claimPublicationPrimeTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Publication%20Prime%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="claimTranslatorEditorTasks">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Claim%20Translator%20Editor%20Tasks"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="translatorEditorSetForRework">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.CheckForReworkAction" url="?activityName=Translator%20Editor%20Set%20For%20Rework"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilter"/>
+		</action>
+		<action name="allocateAuthorReviewer">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Set%20Author%20Reviewers"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="allocateValidator">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Set%20Validators"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="allocateEditor">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Set%20Editors"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="allocateTranslator">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Set%20Translators"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="allocateTranslatorEditor">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Set%20Translator%20Editors"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="allocateFrenchIllustrator">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.OpenWorkflowTaskAction" url="?activityName=Set%20French%20Illustrators"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="releaseForPeerReview">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.ReleaseForVerificationAction" url="?activityName=Release%20for%20Peer%20Review"/>
+			<includeFilter name="com.ptc.cat.ui.client.internal.action.OneSelectionFilter"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="completePeerReview">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.ReleaseForVerificationAction" url="?activityName=Complete%20Peer%20Review"/>
+			<includeFilter name="com.ptc.cat.ui.client.internal.action.OneSelectionFilter"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="completeValidatorReview">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.ReleaseForVerificationAction" url="?activityName=Complete%20Validator%20Review"/>
+			<includeFilter name="com.ptc.cat.ui.client.internal.action.OneSelectionFilter"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="releaseForTranslation">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.ReleaseForVerificationAction" url="?activityName=Release%20For%20Translation"/>
+			<includeFilter name="com.ptc.cat.ui.client.internal.action.OneSelectionFilter"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+		<action name="releaseForTranslatorEditorReview">
+			<command class="com.ptc.arbortext.windchill.rules.structure.client.action.ReleaseForVerificationAction" url="?activityName=Release%20For%20Translator%20Editor%20Review"/>
+			<includeFilter name="com.ptc.cat.ui.client.internal.action.OneSelectionFilter"/>
+			<includeFilter name="S1000DProductFilter"/>
+			<includeFilter name="WorkflowTaskFilterHidden"/>
+		</action>
+	</objecttype>
+
+
+<listofactions/>

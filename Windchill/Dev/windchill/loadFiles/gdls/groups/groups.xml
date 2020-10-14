@@ -1,0 +1,69 @@
+<?xml version="1.0" ?><!DOCTYPE NmLoader SYSTEM "standard11_1.dtd">
+<NmLoader>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Editor_group</csvgroupName>
+    <csvdescription>Editor group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Diagnostics_Author_group</csvgroupName>
+    <csvdescription>Diagnostics Author group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName> Illustrator_group</csvgroupName>
+    <csvdescription>Illustrator group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Logistics_Prime_group</csvgroupName>
+    <csvdescription>Logistics Prime group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Maintenance_Author_group</csvgroupName>
+    <csvdescription>Maintenance Author group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Operators_Author_group</csvgroupName>
+    <csvdescription>Operators Author group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Parts_Content_Author_group</csvgroupName>
+    <csvdescription>Parts Content Author group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Publication_Prime_group</csvgroupName>
+    <csvdescription>Publicatioin Prime group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Translator_Editor_group</csvgroupName>
+    <csvdescription>Translator Editor group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Translator_group</csvgroupName>
+    <csvdescription>Translator group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+<csvGroup handler="wt.load.LoadUser.createGroup" >
+    <csvuser></csvuser>
+    <csvgroupName>Validator_group</csvgroupName>
+    <csvdescription>Validator group</csvdescription>
+    <csvDirectoryService></csvDirectoryService>
+</csvGroup>
+</NmLoader>

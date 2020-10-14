@@ -1,0 +1,56 @@
+ResourceInfo.class=wt.tools.resource.EnumResourceInfo
+ResourceInfo.customizable=true
+ResourceInfo.deprecated=false
+ResourceInfo.replacement=false
+ResourceInfo.UUID=8db111cc-5428-4d8b-b2e9-ed3a5b20baf0
+
+
+# Entry Format (values equal to default value are not included)
+# <key>.value=
+# <key>.category=
+# <key>.comment=
+# <key>.argComment<n>=
+# <key>.constant=
+# <key>.customizable=
+# <key>.deprecated=
+# <key>.abbreviatedDisplay=
+# <key>.fullDisplay=
+# <key>.shortDescription=
+# <key>.longDescription=
+# <key>.order=
+# <key>.defaultValue=
+# <key>.selectable=
+
+# Entry Contents
+
+AUTHOR_REVIEWER.value=Author Reviewer
+AUTHOR_REVIEWER.shortDescription=Author Reviewer
+AUTHOR_REVIEWER.order=3152
+
+EDITOR.value=Editor
+EDITOR.shortDescription=Editor
+EDITOR.order=2832
+
+LOGISTICS_PRIME.value=Logistics Prime
+LOGISTICS_PRIME.shortDescription=Logistics Prime
+LOGISTICS_PRIME.order=2704
+
+PUBLICATION_PRIME.value=Publication Prime
+PUBLICATION_PRIME.shortDescription=Publication Prime
+PUBLICATION_PRIME.order=3024
+
+SUPERVISOR.value=Supervisor
+SUPERVISOR.shortDescription=Supervisor
+SUPERVISOR.order=3088
+
+TRANSLATOR.value=Translator
+TRANSLATOR.shortDescription=Translator
+TRANSLATOR.order=2896
+
+TRANSLATOR_EDITOR.value=Translator Editor
+TRANSLATOR_EDITOR.shortDescription=Translator Editor
+TRANSLATOR_EDITOR.order=2960
+
+VALIDATOR.value=Validator
+VALIDATOR.shortDescription=Validator
+VALIDATOR.order=2768

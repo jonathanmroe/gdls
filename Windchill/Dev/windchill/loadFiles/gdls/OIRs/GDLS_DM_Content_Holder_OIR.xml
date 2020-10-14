@@ -1,0 +1,21 @@
+                                    <AttributeValues objType="sis.DatamoduleHolder">
+                    	<AttrValue id="folder.id" algorithm="com.ptc.core.foundation.folder.server.impl.FolderPathAttributeAlgorithm">
+							<Value algorithm="wt.rule.algorithm.BooleanBranch">
+								<Value algorithm="com.ptc.arbortext.windchill.rules.algorithm.IsDescendedFromTypes">
+									<Arg>sis.s1000D.Product</Arg>
+									<Arg>sis.s1000DLibrary</Arg>
+								</Value>
+                            	<Arg>/Default/S1000D</Arg>
+								<Arg>/Default</Arg>
+							</Value>
+                        </AttrValue>
+                        
+                        <AttrValue id="MBA|versionInfo" algorithm="com.ptc.core.foundation.vc.server.impl.VersionInfoGenerator">
+                            <Arg>wt.series.HarvardSeries.S1000D</Arg>
+                        </AttrValue>
+                        
+                        <AttrValue id="lifeCycle.id" algorithm="com.ptc.core.foundation.lifecycle.server.impl.LifeCycleTemplateAttributeAlgorithm">
+                            <Arg>GDLS S1000D DM Holder Lifecycle</Arg>
+                        </AttrValue>
+                    </AttributeValues>
+                            

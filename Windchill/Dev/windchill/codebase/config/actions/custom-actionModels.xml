@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionmodels resourceBundle="com.ptc.arbortext.windchill.rules.s1000D.DMRLActionsRB">
+	<!-- Remove the edit action from the tree view once it works in the DMRL -->
+	
+	<model name="RulesButtons">
+		<action name="checkinButton" type="object" />
+		<action name="editCancelButton" type="dmrl" />
+	</model>
+	
+	<model name="dmrl.toolbar">
+		<action name="editAttributes" type="dmrl" />
+		<action name="showReports" type="asps" />
+		<action name="refresh" type="corestruct" />
+		<action name="separator" type="separator" />
+		<action name="openInEditor" type="asps" />
+		<action name="openInIsoDraw" type="asps" />
+		<action name="showHelp" type="dmrl" />
+	</model>
+	
+	<model name="dmrl.contextmenu">
+		<action name="viewInfoGWT" type="cat" />
+		<action name="allocateWorkflow" type="dmrl" />
+		<action name="allocateWorkflowtoICN" type="dmrl" />
+		<action name="showReports" type="asps" />
+		<action name="separator" type="separator" />
+		<action name="openInEditor" type="asps" />
+		<action name="openInIsoDraw" type="asps" />
+		<action name="separator" type="separator" />
+		<submodel name="management" />
+		<submodel name="author" />
+		<submodel name="illustrator" />
+		<submodel name="authorReviewer" />
+		<submodel name="validator" />
+		<submodel name="review" />
+		<action name="separator" type="separator" />
+		<submodel name="firstverification"/>
+		<submodel name="secondverification"/>
+		<action name="separator" type="separator" />
+		<submodel name="translator" />
+		<submodel name="translatorEditor" />
+		<submodel name="publicationPrime" />
+	</model>
+	
+	<model name="management" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="releaseForAuthoring" type="dmrl" />
+		<action name="releaseForIllustrating" type="dmrl" />
+		<action name="raiseDMIssue" type="dmrl" />
+		<action name="raiseCageICNIssue" type="dmrl" />
+		<action name="raiseModelICNIssue" type="dmrl" />
+		<action name="purge" type="rules" />
+		<action name="separator" type="separator" />
+		<action name="claimLogisticsPrimeTasks" type="gdls" />
+		<action name="allocateAuthor" type="dmrl" />
+		<action name="allocateIllustrator" type="dmrl" />
+		<action name="allocateAuthorReviewer" type="gdls" />
+		<action name="allocateValidator" type="gdls" />
+		<action name="allocateEditor" type="gdls" />
+
+		<action name="setStateWIP" type="dmrl" />
+	</model>
+	
+	<model name="author">
+		<action name="claimAuthorTasks" type="gdls" />
+		<action name="editAttributes" type="dmrl" />
+		<action name="releaseForPeerReview" type="gdls" />
+		<action name="illustrateICN" type="dmrl" />
+		<action name="releaseForPackaging" type="dmrl" />
+	</model>
+	
+	<model name="illustrator" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimIllustratorTasks" type="gdls" />
+		<action name="illustrateICN" type="dmrl" />
+		<action name="releaseForVerification" type="dmrl" />
+	</model>
+	
+	<model name="authorReviewer" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimAuthorReviewerTasks" type="gdls" />
+		<action name="authorReviewerSetForRework" type="gdls" />
+		<!--
+		<action name="rework" type="dmrl" />
+		-->
+		<action name="completePeerReview" type="gdls" />	
+	</model>
+	
+	<model name="validator" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimValidatorTasks" type="gdls" />
+		<action name="validatorSetForRework" type="gdls" />
+		<!--
+		<action name="rework" type="dmrl" />
+		-->
+		<action name="completeValidatorReview" type="gdls" />
+	</model>
+	
+	<model name="review" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimEditorTasks" type="gdls" />
+		<action name="editorSetForRework" type="gdls" />
+		<!--
+		<action name="rework" type="dmrl" />
+		-->
+		<action name="issue" type="dmrl" />
+		<action name="issueICN" type="dmrl" />
+		<action name="separator" type="separator" />
+		<action name="unverify" type="dmrl" />
+		<action name="unverifyICN" type="dmrl" />
+		<action name="separator" type="separator" />
+	</model>
+	
+	<model name="translator" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimTranslatorTasks" type="gdls" />
+		<action name="editAttributes" type="dmrl" />
+		<action name="releaseForTranslatorEditorReview" type="gdls" />
+		<action name="illustrateICN" type="dmrl" />
+		<action name="releaseForPackaging" type="dmrl" />
+	</model>
+	
+	<model name="translatorEditor" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimTranslatorEditorTasks" type="gdls" />
+		<action name="translatorEditorSetForRework" type="gdls" />
+		<!--
+		<action name="rework" type="dmrl" />
+		-->
+		<action name="issue" type="dmrl" />
+		<action name="issueICN" type="dmrl" />
+		<action name="separator" type="separator" />
+		<action name="unverify" type="dmrl" />
+		<action name="unverifyICN" type="dmrl" />
+		<action name="separator" type="separator" />
+	</model>
+	
+	<model name="publicationPrime" resourceBundle="com.ptc.arbortext.windchill.rules.RulesGDLSActionsRB">
+		<action name="claimPublicationPrimeTasks" type="gdls" />
+		<action name="releaseForTranslation" type="gdls" />
+		<action name="releaseForIllustrating" type="dmrl" />
+		<action name="raiseDMIssue" type="dmrl" />
+		<action name="raiseCageICNIssue" type="dmrl" />
+		<action name="raiseModelICNIssue" type="dmrl" />
+		<action name="purge" type="rules" />
+		<action name="separator" type="separator" />
+		<action name="allocateTranslator" type="gdls" />
+		<action name="allocateFrenchIllustrator" type="gdls" />
+		<action name="allocateTranslatorEditor" type="gdls" />
+	</model>
+	
+	<model name="firstverification">
+		<action name="firstverification-tabtop" type="dmrl" />
+		<action name="firstverification-onObject" type="dmrl" />
+		<action name="firstverification-tTandOO" type="dmrl" />
+	</model>
+	
+	<model name="secondverification">
+		<action name="secondverification-tabtop" type="dmrl" />
+		<action name="secondverification-onObject" type="dmrl" />
+		<action name="secondverification-tTandOO" type="dmrl" />
+		<action name="secondverification-clear" type="dmrl" />
+	</model>
+</actionmodels>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="deploy" default="init">
+	<tstamp>
+		<format property="timestamp" pattern="yyyy-MM-dd_HH-mm-ss" />
+	</tstamp>
+	<property name="deploy.log.filename" value="deploy_${timestamp}.log" />
+	<property environment="env" />
+	<property name="wt.home" value="${env.WT_HOME}" />
+	<property name="customer.name" value="gdls" />
+	<property name="reverse.domain" value="com/ptc/arbortext/windchill/rules" />
+	<property name="build" location="." />
+
+	<macrodef name="echoTS">
+		<attribute name="message" />
+		<sequential>
+			<ac:var xmlns:ac="antlib:net.sf.antcontrib" name="current.time" unset="true" />
+			<tstamp>
+				<format property="current.time" pattern="yyyy-MM-dd HH:mm:ss" />
+			</tstamp>
+			<echo message="${current.time}> @{message}" />
+		</sequential>
+	</macrodef>
+
+	<condition property="isWindows">
+		<os family="windows" />
+	</condition>
+
+	<condition property="isLinux">
+		<os family="unix" />
+	</condition>
+
+	<!-- Script Initialization -->
+	<target name="init">
+		<input message="Please enter your Windchill username:" addproperty="wc.user" />
+		<input message="Please enter your Windchill password:" addproperty="wc.pwd">
+			<handler classname="org.apache.tools.ant.input.SecureInputHandler" />
+		</input>
+		<input message="Please enter the Windchill Organization name:" addproperty="wc.org" />
+		<input message="Please enter the Windchill Domain (e.g. &quot;co.gpsl&quot;):" addproperty="wc.domain" />
+
+		<echoTS message="Windchill home: ${wt.home}" />
+		<echoTS message="Windchill username: ${wc.user}" />
+		<echoTS message="Windchill password: ********" />
+		<echoTS message="Windchill Organization: ${wc.org}" />
+		<echoTS message="Windchill Domain: ${wc.domain}" />
+		<echoTS message="Starting deployment..." />
+		<antcall target="replaceOrgAndDomain" inheritAll="true" inheritRefs="true" />
+		<antcall target="beginDeploy" inheritAll="true" inheritRefs="true" />
+
+	</target>
+
+	<target name="replaceOrgAndDomain">
+		<replace dir="${wt.home}/wtSafeArea/siteMod" value="${wc.org}">
+			<include name="**/*.xml" />
+			<exclude name="deploy.xml" />
+			<replacetoken>GPSL</replacetoken>
+		</replace>
+		<replace dir="${wt.home}/wtSafeArea/siteMod" value="${wc.domain}">
+			<include name="**/*.xml" />
+			<exclude name="deploy.xml" />
+			<replacetoken>co.gpsl</replacetoken>
+		</replace>
+		<replace dir="${wt.home}/wtSafeArea/siteMod" value="${wc.domain}">
+			<include name="**/*.xml" />
+			<exclude name="deploy.xml" />
+			<replacetoken>gdls</replacetoken>
+		</replace>
+	</target>
+
+	 <target name="deployEnumerations" depends="runLinux, runWindows, bundleCustom">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Deploying custom enumerations..." />
+
+		<antcall target="makeJar" inheritAll="true" inheritRefs="true" />
+
+	</target>
+
+	<target name="compile" depends="runLinux, runWindows, deploy">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Compiling class files..." />
+
+		<antcall target="runCompile" inheritAll="true" inheritRefs="true" />
+
+	</target>
+
+	<!--<target name="beginDeploy"  depends="runLinux, runWindows, deploy, loadObjectTypes"/>
+		<target name="beginDeploy"  depends="runLinux, runWindows, deploy, compile, makeJar, loadXconfFiles,
+			loadObjectTypes, loadTemplates, loadSitePrefs, loadWorkflows, loadLifecycles, loadInitRules">-->
+	<target name="beginDeploy" depends="runLinux, runWindows, deploy">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+
+		<input message="Do you want to run the compile command?" addproperty="run.compile" validargs="y,n" defaultvalue="n" />
+
+		<condition property="compile">
+			<and>
+				<isset property="run.compile" />
+				<equals arg1="${run.compile}" arg2="y" />
+			</and>
+		</condition>
+		<antcall target="compile" inheritAll="true" inheritRefs="true" />
+
+		<input message="Do you want to run makeJar?" addproperty="run.makeJar" validargs="y,n" defaultvalue="n" />
+
+		<condition property="makeJar">
+			<and>
+				<isset property="run.makeJar" />
+				<equals arg1="${run.makeJar}" arg2="y" />
+			</and>
+		</condition>
+		<antcall target="makeJar" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadXconfFiles" inheritAll="true" inheritRefs="true" />
+
+		<input message="Some objects may have been depolyed that require a restart. Do you want to restart Windchill now?" addproperty="restart" validargs="y,n" defaultvalue="n" />
+
+		<condition property="restartWC">
+			<and>
+				<isset property="restart" />
+				<equals arg1="${restart}" arg2="y" />
+			</and>
+		</condition>
+		<antcall target="restartWindchill" inheritAll="true" inheritRefs="true" />
+
+		<antcall target="loadObjectTypes" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadGroups" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadTemplates" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadSitePrefs" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadWorkflows" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadLifecycles" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadInitRules" inheritAll="true" inheritRefs="true" />
+		<antcall target="loadViews" inheritAll="true" inheritRefs="true"/>
+		<antcall target="loadBusinessRules" inheritAll="true" inheritRefs="true"/>
+
+	</target>
+
+	<target name="runLinux" if="isLinux">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<property name="wc.executable" value="${wt.home}/bin/windchill2.sh" />
+		<property name="ant.executable" value="ant" />
+		<property name="xconfmanager.executable" value="xconfmanager" />
+		<exec executable="${wc.executable}">
+			<arg value="version" />
+		</exec>
+	</target>
+
+	<target name="runWindows" if="isWindows">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<property name="wc.executable" value="${wt.home}/bin/windchill.exe" />
+		<property name="ant.executable" value="${wt.home}/ant/bin/ant.bat" />
+		<property name="xconfmanager.executable" value="${wt.home}/bin/xconfmanager.bat" />
+		<exec executable="${wc.executable}">
+			<arg value="version" />
+		</exec>
+	</target>
+
+	<target name="deploy">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Deploying build to WT_HOME..." />
+		<exec executable="${ant.executable}">
+			<arg value="-f" />
+			<arg value="${wt.home}/bin/swmaint.xml" />
+			<arg value="installSiteChanges" />
+		</exec>
+		<copy todir="${wt.home}/wtCustom">
+		  <fileset dir="${wt.home}/wtSafeArea/siteMod/wtCustom"/>
+		</copy>
+	</target>
+
+	<target name="loadObjectTypes">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading object types..." />
+		<property name="cont.path" value="/" />
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/typedefinitions" casesensitive="no" erroronmissingdir="no">
+				<include name="**/*.xml" />
+				<exclude name="**/*_LoadSet.xml" />
+			</fileset>
+		</ac:foreach>
+	</target>
+
+	<target name="loadTemplates">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading templates..." />
+
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/templates" casesensitive="no" erroronmissingdir="no">
+				<include name="**/*.xml" />
+			</fileset>
+		</ac:foreach>
+	</target>
+
+
+	<target name="loadInitRules">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading object types..." />
+		<property name="cont.path" value="/" />
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/OIRs" casesensitive="no" erroronmissingdir="no">
+				<include name="*.xml" />
+			</fileset>
+		</ac:foreach>
+	</target>
+
+	<target name="loadSitePrefs">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading site preferences..." />
+		<property name="cont.path" value="/" />
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/preferences/site" casesensitive="no" erroronmissingdir="no">
+				<include name="*.xml" />
+			</fileset>
+		</ac:foreach>
+	</target>
+
+	<target name="loadWorkflows">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading workflows..." />
+		<property name="cont.path" value="/" />
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/workflows" casesensitive="no" erroronmissingdir="no">
+				<include name="*.xml" />
+			</fileset>
+		</ac:foreach>
+	</target>
+
+	<target name="loadLifecycles">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading lifecyles..." />
+		<property name="cont.path" value="/" />
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/lifecycles" casesensitive="no" erroronmissingdir="no">
+				<include name="*.xml" />
+			</fileset>
+		</ac:foreach>
+	</target>
+
+	<target name="loadXconfFiles">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading xconf files..." />
+		<property name="cont.path" value="/" />
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="runXconfmanager" param="xconfFile" inheritall="true">
+			<param name="cont.path" value="/" />
+			<fileset dir="${wt.home}/codebase/${reverse.domain}/${customer.name}" casesensitive="no" erroronmissingdir="no">
+				<include name="*.xconf" />
+			</fileset>
+		</ac:foreach>
+	</target>
+	
+	<target name="loadViews" >
+		<record name="${deploy.log.filename}" loglevel="info" append="true"/>
+		<echoTS message="Loading view files..." />
+		<property name="cont.path" value="/"/>
+		<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+			<param name="cont.path" value="/"/>
+			<fileset dir="${wt.home}/loadFiles/${customer.name}/views" casesensitive="no" erroronmissingdir="no">
+				<include name="*.xml"/>
+			</fileset>
+		</ac:foreach>
+	</target>
+	
+	<target name="loadBusinessRules" >
+			<record name="${deploy.log.filename}" loglevel="info" append="true"/>
+			<echoTS message="Loading business rules..." />
+			<property name="cont.path" value="/"/>
+			<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+				<param name="cont.path" value="/wt.inf.container.OrgContainer=${wc.org}"/>
+				<fileset dir="${wt.home}/loadFiles/${customer.name}/businessrules" casesensitive="no" erroronmissingdir="no">
+					<include name="*.xml"/>
+				</fileset>
+			</ac:foreach>
+	</target>
+	
+	<target name="loadGroups" >
+			<record name="${deploy.log.filename}" loglevel="info" append="true"/>
+			<echoTS message="Loading groups..." />
+				<property name="cont.path" value="/"/>
+				<ac:foreach xmlns:ac="antlib:net.sf.antcontrib" target="loadFromFile" param="loadFile" inheritall="true">
+					<param name="cont.path" value="/wt.inf.container.OrgContainer=${wc.org}"/>
+					<fileset dir="${wt.home}/loadFiles/${customer.name}/groups" casesensitive="no" erroronmissingdir="no">
+						<include name="*.xml"/>
+					</fileset>
+				</ac:foreach>
+	</target>
+
+	<target name="bundleCustom">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Running command: ant -f bin/tools.xml bundle_custom" />
+		<copy todir="${wt.home}/wtCustom">
+			<fileset dir="${build}/wtCustom" includes="**" />
+		</copy>
+		<exec executable="${ant.executable}">
+			<arg value="-f" />
+			<arg value="${wt.home}/bin/tools.xml" />
+			<arg value="bundle_custom" />
+		</exec>
+	</target>
+
+	 
+	<target name="makeJar" if="makeJar">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Running command: ant -f codebase/MakeJar.xml custUpdate" />
+		<exec executable="${ant.executable}">
+			<arg value="-f" />
+			<arg value="${wt.home}/codebase/MakeJar.xml" />
+			<arg value="custUpdate" />
+		</exec>
+
+	</target>
+
+	<target name="runCompile" if="compile">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Compiling class files..." />
+
+		<exec executable="${ant.executable}">
+			<arg value="-f" />
+			<arg value="${wt.home}/bin/tools.xml" />
+			<arg value="class" />
+			<arg value="-Dclass.includes=${reverse.domain}/${customer.name}/**/*.java" />
+		</exec>
+
+	</target>
+
+	<target name="runXconfmanager">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Running command: xconfmanager -i ${xconfFile} -p" />
+		<exec executable="${xconfmanager.executable}">
+			<arg value="-i" />
+			<arg value="${xconfFile}" />
+			<arg value="-p" />
+		</exec>
+
+	</target>
+
+	<target name="loadFromFile">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Loading ${loadFile}" />
+		<exec executable="${wc.executable}">
+			<arg value="wt.load.LoadFromFile" />
+			<arg value="-d" />
+			<arg value="${loadFile}" />
+			<arg value="-u" />
+			<arg value="${wc.user}" />
+			<arg value="-p" />
+			<arg value="${wc.pwd}" />
+			<arg value="-CONT_PATH" />
+			<arg value="${cont.path}" />
+			<!--<arg value="-noserverstop" />
+				<arg value="-unattended" />-->
+		</exec>
+	</target>
+
+	<target name="restartWindchill" if="restartWC">
+		<record name="${deploy.log.filename}" loglevel="info" append="true" />
+		<echoTS message="Restarting Windchill.." />
+		<exec executable="${wc.executable}">
+			<arg value="stop" />
+		</exec>
+
+		<exec executable="${wc.executable}">
+			<arg value="start" />
+		</exec>
+
+	</target>
+
+</project>

@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE NmLoader SYSTEM "standard11_2.dtd">
+<NmLoader>
+  <csvLifeCycleTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createLifeCycleTemplate">
+    <csvname>GDLS S1000D DM Holder Lifecycle</csvname>
+    <csvdescription>Lifecycle template for S1000D Data Modules</csvdescription>
+    <csvsupportedClass>wt.fc.WTObject</csvsupportedClass>
+    <csvfolderLocation>/System</csvfolderLocation>
+    <csvenabled>true</csvenabled>
+    <csvrouting>false</csvrouting>
+    <csvbasic>true</csvbasic>
+  </csvLifeCycleTemplateBegin>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Pending</csvname>
+    <csvphaseState>PENDING</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>LOGISTICS_PRIME</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>16</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Work In Progress</csvname>
+    <csvphaseState>WIP</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>AUTHOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>ILLUSTRATOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>LOGISTICS_PRIME</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>16</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>2</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>-1</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Peer Review</csvname>
+    <csvphaseState>PEER_REVIEW</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>AUTHOR_REVIEWER</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>LOGISTICS_PRIME</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR_REVIEWER</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Validator Review</csvname>
+    <csvphaseState>VALIDATOR_REVIEW</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>VALIDATOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>LOGISTICS_PRIME</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>VALIDATOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>VALIDATOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>VALIDATOR</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>VALIDATOR</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>VALIDATOR</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Editorial Review</csvname>
+    <csvphaseState>EDITORIAL_REVIEW</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>EDITOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>LOGISTICS_PRIME</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>EDITOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>EDITOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>EDITOR</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>EDITOR</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>EDITOR</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Rework Required</csvname>
+    <csvphaseState>REWORKREQUIRED</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>AUTHOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>ILLUSTRATOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>LOGISTICS_PRIME</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>ILLUSTRATOR</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>LOGISTICS_PRIME</csvrole>
+    <csvpermission>-1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Issue Required</csvname>
+    <csvphaseState>ISSUEREQUIRED</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>AUTHOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>PRODUCT MANAGER</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>REVIEWER</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>2</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Issued</csvname>
+    <csvphaseState>ISSUED</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>AUTHOR</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>PRODUCT MANAGER</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvRoleHolder handler="wt.project.LoadProject.createRoleHolder">
+    <csvroleToAssign>REVIEWER</csvroleToAssign>
+    <csvassignedPrincipal></csvassignedPrincipal>
+  </csvRoleHolder>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>REVIEWER</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>1</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>11</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>16</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>13</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>2</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>15</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>7</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>9</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>5</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>PRODUCT MANAGER</csvrole>
+    <csvpermission>6</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>0</csvpermission>
+  </csvWTAclEntry>
+  <csvWTAclEntry handler="wt.lifecycle.LoadLifeCycle.createWTAclEntry">
+    <csvrole>AUTHOR</csvrole>
+    <csvpermission>10</csvpermission>
+  </csvWTAclEntry>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Delivered</csvname>
+    <csvphaseState>DELIVERED</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow></csvgateWorkflow>
+    <csvseriesSelector>NUMERIC</csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseTemplateBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateBegin">
+    <csvname>Imported</csvname>
+    <csvphaseState>IMPORTED</csvphaseState>
+    <csvphaseWorkflow></csvphaseWorkflow>
+    <csvgateWorkflow>Review</csvgateWorkflow>
+    <csvseriesSelector></csvseriesSelector>
+  </csvPhaseTemplateBegin>
+  <csvPhaseTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createPhaseTemplateEnd"></csvPhaseTemplateEnd>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PENDING</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PENDING</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PENDING</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>REWORKREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PENDING</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>ISSUEREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>WIP</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>PEER_REVIEW</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>WIP</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>PEER_REVIEW</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PEER_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>VALIDATOR_REVIEW</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PEER_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PEER_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>VALIDATOR_REVIEW</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>PEER_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>REWORKREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>VALIDATOR_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>EDITORIAL_REVIEW</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>VALIDATOR_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>VALIDATOR_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>EDITORIAL_REVIEW</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>VALIDATOR_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>REWORKREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>EDITORIAL_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>REWORKREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>EDITORIAL_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>EDITORIAL_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>REWORKREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>EDITORIAL_REVIEW</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>ISSUEREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>REWORKREQUIRED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>ISSUEREQUIRED</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>REWORKREQUIRED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUEREQUIRED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>ISSUED</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUEREQUIRED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>ISSUED</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUEREQUIRED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>ISSUED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>DELIVERED</csvsuccessorPhaseState>
+    <csvphaseTransition>LOCK</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>DELIVERED</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>DELIVERED</csvsuccessorPhaseState>
+    <csvphaseTransition>PROMOTE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>WIP</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>PENDING</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>ISSUED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>DELIVERED</csvsuccessorPhaseState>
+    <csvphaseTransition>SET_STATE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>DELIVERED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>IMPORTED</csvsuccessorPhaseState>
+    <csvphaseTransition>NEXT</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvPhaseSuccessionBegin handler="wt.lifecycle.LoadLifeCycle.createPhaseSuccessionBegin">
+    <csvlifeCycleName>GDLS S1000D DM Holder Lifecycle</csvlifeCycleName>
+    <csvpredecessorPhaseState>DELIVERED</csvpredecessorPhaseState>
+    <csvsuccessorPhaseState>PENDING</csvsuccessorPhaseState>
+    <csvphaseTransition>REVISE</csvphaseTransition>
+  </csvPhaseSuccessionBegin>
+  <csvLifeCycleTemplateEnd handler="wt.lifecycle.LoadLifeCycle.createLifeCycleTemplateEnd"></csvLifeCycleTemplateEnd>
+</NmLoader>
